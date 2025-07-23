@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="912.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.ParentsController">
+   <children>
+      <TableView fx:id="TvParents" prefHeight="314.0" prefWidth="912.0">
+         <columns>
+            <TableColumn fx:id="TcFIO" prefWidth="184.00003051757812" text="ФИО" />
+            <TableColumn fx:id="TcTelefon" prefWidth="167.99996948242188" text="Контактные данные" />
+            <TableColumn fx:id="TCAdres" prefWidth="177.60003662109375" text="Адрес" />
+            <TableColumn fx:id="TcPassport" prefWidth="174.39996337890625" text="Паспортные данные" />
+            <TableColumn fx:id="TcChildrenFIO" prefWidth="211.20001220703125" text="ФИО ребенка" />
+         </columns>
+      </TableView>
+      <Label layoutX="15.0" layoutY="319.0" text="Фильтр">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="760.0" layoutX="141.0" layoutY="338.0" startX="-128.2001190185547" strokeWidth="0.6" />
+      <Line endX="-4.60009765625" endY="7.600006103515625" layoutX="468.0" layoutY="339.0" startX="-4.60009765625" startY="222.0" strokeWidth="0.6" />
+      <AnchorPane layoutX="27.0" layoutY="354.0" prefHeight="200.0" prefWidth="408.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #8B5127;">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="11.0" opacity="0.14" prefHeight="178.0" prefWidth="387.0" style="-fx-background-color: #c7613f; -fx-background-radius: 10;" />
+            <Label layoutX="85.0" layoutY="24.0" style="-fx-text-fill: #8B5127;" text="Поиск воспитанника">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="56.0" style="-fx-text-fill: #8B5127;" text="ФИО" />
+            <ComboBox fx:id="FiltrFIOSChild" layoutX="128.0" layoutY="52.0" onAction="#FiltrFIOChild" prefHeight="18.0" prefWidth="178.0" style="-fx-background-color: #c99579; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <CheckBox fx:id="CheckFioChild" layoutX="51.0" layoutY="56.0" mnemonicParsing="false" onAction="#OnFiltrFIOChild" />
+            <Label layoutX="86.0" layoutY="101.0" style="-fx-text-fill: #8B5127;" text="Поиск родителя">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="133.0" style="-fx-text-fill: #8B5127;" text="ФИО" />
+            <ComboBox fx:id="FiltrFIOS1" layoutX="129.0" layoutY="129.0" onAction="#FiltrFIO" prefHeight="18.0" prefWidth="178.0" style="-fx-background-color: #c99579; -fx-background-radius: 10; -fx-border-radius: 10;" />
+            <CheckBox fx:id="CheckFio1" layoutX="52.0" layoutY="133.0" mnemonicParsing="false" onAction="#OnFiltrFIO1" />
+         </children>
+      </AnchorPane>
+      <VBox layoutX="489.0" layoutY="354.0" prefHeight="200.0" prefWidth="398.0" spacing="7.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #4A686A;">
+         <children>
+            <Label style="-fx-text-fill: #4A686A;" text="Панель управления" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="BtnAdd" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Добавить" />
+            <Button fx:id="BtnEdt" mnemonicParsing="false" onAction="#Edit" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Редактировать" />
+            <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#Delete" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Удалить" />
+            <Button fx:id="BtnPrint" mnemonicParsing="false" onAction="#Print" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Печать" />
+         </children>
+         <padding>
+            <Insets left="108.0" top="6.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

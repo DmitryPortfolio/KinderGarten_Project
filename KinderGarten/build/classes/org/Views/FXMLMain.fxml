@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="946.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.MainController">
+   <children>
+      <MenuBar layoutY="0.0" prefHeight="31.0" prefWidth="946.0" style="-fx-background-color: #4A686A; -fx-border-color: #77C4D1; -fx-border-width: 0 0 1 0; -fx-text-fill: #e6b5a3;">
+         <menus>
+            <Menu mnemonicParsing="false" style="-fx-text-fill: #E99E75; -fx-font-family: Arial; -fx-font-size: 14;" text="Справочники">
+               <items>
+                  <MenuItem fx:id="KinderGarten" mnemonicParsing="false" onAction="#BtnKinderGarten" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Об организации">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/r8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="BtnTeacher" mnemonicParsing="false" onAction="#Teacher" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Об учителях">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/r9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="BtnParents" mnemonicParsing="false" onAction="#Parents" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Список родителей">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/r10.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="BtnRoom" mnemonicParsing="false" onAction="#Room" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Комнаты">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/r11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="BtnLessons" mnemonicParsing="false" onAction="#OpenLessons" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Список занятий">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/r11.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" style="-fx-text-fill: #E99E75; -fx-font-family: Arial; -fx-font-size: 14;" text="Функции">
+               <items>
+                  <MenuItem fx:id="Exit" mnemonicParsing="false" onAction="#miExit" style="-fx-text-fill: #4A686A; -fx-font-family: Arial; -fx-font-size: 16;" text="Выход из программы">
+                  </MenuItem>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <VBox layoutX="548.0" layoutY="82.0" prefHeight="546.0" prefWidth="360.0" spacing="20.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <Button fx:id="BtnGroup" alignment="CENTER" mnemonicParsing="false" onAction="#Groups" prefHeight="66.0" prefWidth="263.0" style="-fx-background-color: #4A686A; -fx-text-fill: #E6F0F0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-font-family: Arial; -fx-font-size: 18;" text="Группы">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/groups.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="Children" alignment="CENTER" mnemonicParsing="false" onAction="#BtnChildren" prefHeight="66.0" prefWidth="263.0" style="-fx-background-color: #4A686A; -fx-text-fill: #E6F0F0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-font-family: Arial; -fx-font-size: 18;" text="Воспитанники">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/children.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BtnTimeTable" alignment="CENTER" mnemonicParsing="false" onAction="#TimeTable" prefHeight="66.0" prefWidth="263.0" style="-fx-background-color: #4A686A; -fx-text-fill: #E6F0F0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-font-family: Arial; -fx-font-size: 18;" text="Расписание">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/clock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BtnAttendance" alignment="CENTER" mnemonicParsing="false" onAction="#Attendance" prefHeight="66.0" prefWidth="263.0" style="-fx-background-color: #4A686A; -fx-text-fill: #E6F0F0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-font-family: Arial; -fx-font-size: 18;" text="Посещаемость">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BtnMenu" alignment="CENTER" mnemonicParsing="false" onAction="#Menu" prefHeight="66.0" prefWidth="263.0" style="-fx-background-color: #4A686A; -fx-text-fill: #E6F0F0; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-font-family: Arial; -fx-font-size: 18;" text="Меню">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cak.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="20.0" top="65.0" />
+         </padding>
+      </VBox>
+      <ImageView blendMode="COLOR_BURN" fitHeight="497.0" fitWidth="496.0" layoutX="25.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/KINDERGARTEN.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="DatePostuppppS" prefHeight="639.0" prefWidth="1123.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.ChildrenController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="397.0" opacity="0.18" prefHeight="227.0" prefWidth="486.0" style="-fx-background-color: #c7613f; -fx-background-radius: 10;" />
+      <TableView fx:id="TVChildren" layoutY="-1.0" prefHeight="350.0" prefWidth="1123.0">
+        <columns>
+          <TableColumn fx:id="TcFIO" prefWidth="142.3999900817871" text="ФИО" />
+            <TableColumn fx:id="TcBirthday" prefWidth="99.20001220703125" text="День рождение" />
+            <TableColumn fx:id="TcDateReceipt" prefWidth="132.8000030517578" text="Дата поступления" />
+            <TableColumn fx:id="TcDateDeparture" prefWidth="92.0" text="Дата выбытия" />
+            <TableColumn fx:id="TcNomerGroups" prefWidth="145.60003662109375" text="Наименование группы" />
+            <TableColumn fx:id="TcSveden" prefWidth="148.800048828125" text="Сведение о рождение" />
+            <TableColumn fx:id="TcRetirement" prefWidth="233.5999755859375" text="Прич. выбытия" />
+            <TableColumn fx:id="TcStatus" prefWidth="125.60003662109375" text="Статус" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="359.0" text="Фильтр">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="509.0" style="-fx-text-fill: #8B5127;" text="Дата рождения с" />
+      <Label layoutX="33.0" layoutY="548.0" style="-fx-text-fill: #8B5127;" text="Дата поступл. с" />
+      <Label layoutX="34.0" layoutY="587.0" style="-fx-text-fill: #8B5127;" text="Дата выбытия с" />
+      <Label layoutX="32.0" layoutY="405.0" style="-fx-text-fill: #8B5127;" text="Группа:" />
+      <Label layoutX="34.0" layoutY="455.0" style="-fx-text-fill: #8B5127;" text="Статус:" />
+      <ComboBox fx:id="FiltrStatus" layoutX="88.0" layoutY="451.0" onAction="#FiltrStatuss" prefHeight="26.0" prefWidth="134.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #c99579; -fx-text-fill: #E6F0F0;" />
+      <ComboBox fx:id="FiltrGroup" layoutX="86.0" layoutY="401.0" onAction="#FiltrGroups" prefHeight="26.0" prefWidth="134.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #c99579; -fx-text-fill: #E6F0F0;" />
+      <DatePicker fx:id="DateRozS" layoutX="154.0" layoutY="503.0" onAction="#FiltrDateRozddenie" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <DatePicker fx:id="DatePostS" layoutX="154.0" layoutY="544.0" onAction="#FiltrDatePostup" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <DatePicker fx:id="DateZayvkaS" layoutX="154.0" layoutY="583.0" onAction="#FiltrDatezayvka" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <DatePicker fx:id="DateRozPo" layoutX="352.0" layoutY="503.0" onAction="#FiltrDateRozddenie" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <DatePicker fx:id="DatePostPo" layoutX="352.0" layoutY="544.0" onAction="#FiltrDatePostup" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <DatePicker fx:id="DateZayvkaPo" layoutX="352.0" layoutY="583.0" onAction="#FiltrDatezayvka" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10;" />
+      <Label layoutX="307.0" layoutY="508.0" style="-fx-text-fill: #8B5127;" text="по:" />
+      <Label layoutX="307.0" layoutY="548.0" style="-fx-text-fill: #8B5127;" text="по:" />
+      <Label layoutX="307.0" layoutY="587.0" style="-fx-text-fill: #c7613f;" text="по:" />
+      <Label layoutX="231.0" layoutY="405.0" style="-fx-text-fill: #8B5127;" text="ФИО воспитанника:" />
+      <ComboBox fx:id="FiltrFIOS" layoutX="370.0" layoutY="401.0" onAction="#FiltrFIO" prefHeight="26.0" prefWidth="134.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #c99579; -fx-text-fill: #E6F0F0;" />
+      <Button fx:id="BtnPrint" layoutX="697.0" layoutY="600.0" mnemonicParsing="false" onAction="#Print" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-font-family: Arial; -fx-background-color: #4A686A; -fx-text-fill: #E6F0F0;" text="Печать" />
+      <Button fx:id="BtnExit" layoutX="833.0" layoutY="600.0" mnemonicParsing="false" onAction="#Exit" prefHeight="26.0" prefWidth="123.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-font-family: Arial; -fx-background-color: #4A686A; -fx-text-fill: #E6F0F0;" text="Выход" />
+      <VBox layoutX="551.0" layoutY="400.0" prefHeight="186.0" prefWidth="260.0" spacing="18.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: #4A686A;" text="Работа с приказами" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="BtnCrediting" mnemonicParsing="false" onAction="#Crediting" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Приказ о кандидатуре">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnZach" mnemonicParsing="false" onAction="#Zachislenie" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Приказ о зачислении">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnDer" mnemonicParsing="false" onAction="#Departure" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Приказ о выбытии">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+      <CheckBox fx:id="CheckFio" layoutX="80.0" layoutY="360.0" mnemonicParsing="false" onAction="#OnFiltrFIO" />
+      <Label layoutX="105.0" layoutY="360.0" style="-fx-text-fill: #8B5127;" text="Вкл/Выкл" />
+      <Line endX="947.7999267578125" layoutX="153.0" layoutY="384.0" startX="-128.2001190185547" strokeWidth="0.6" />
+      <VBox layoutX="762.0" layoutY="401.0" spacing="18.0" />
+      <VBox layoutX="840.0" layoutY="400.0" prefHeight="186.0" prefWidth="260.0" spacing="18.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-text-fill: #4A686A;" text="Дополнительные функции" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="BtnChildren" alignment="CENTER" mnemonicParsing="false" onAction="#OpenChildren" prefHeight="26.0" prefWidth="177.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Карточка ребенка">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="BtnEdit" graphicTextGap="8.0" mnemonicParsing="false" onAction="#EditChildren" prefHeight="22.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Редактировать запись">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#Delete" prefHeight="19.0" prefWidth="178.0" style="-fx-background-color: #4A686A; -fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: #77C4D1; -fx-text-fill: #E6F0F0; -fx-font-family: Arial;" text="Удалить связанные записи">
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Line endX="-4.60009765625" endY="-4.399993896484375" layoutX="521.0" layoutY="401.0" startX="-4.60009765625" startY="222.0" strokeWidth="0.6" />
+   </children>
+</AnchorPane>

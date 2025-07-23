@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TimeTable" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e226b4f4-5438-45a9-968f-41b05efc1b26">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+        timetable.Date,
+        timetable.Time,
+        lessons.Name_Lessons AS Id_Lessons,
+        groups.Name_Groups AS Id_Group,
+        classroom.namber_room AS Id_Classroom,
+        teacher.FIO AS Id_Teacher
+    FROM
+        bdkindergarten.timetable
+    INNER JOIN
+        bdkindergarten.lessons ON timetable.Id_Lessons = lessons.ID
+    INNER JOIN
+        bdkindergarten.groups ON timetable.Id_Group = groups.ID
+    INNER JOIN
+        bdkindergarten.classroom ON timetable.Id_Classroom = classroom.ID
+    INNER JOIN
+        bdkindergarten.teacher ON timetable.Id_Teacher = teacher.ID]]>
+	</queryString>
+	<field name="Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<field name="Time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<field name="Id_Lessons" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Id_Lessons"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<field name="Id_Group" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Id_Group"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<field name="Id_Classroom" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Id_Classroom"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<field name="Id_Teacher" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Id_Teacher"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="timetable"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="19" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="0" width="135" height="30" uuid="2ef1ca3a-db51-4d22-a0b2-8db71e173ff8"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Расписание]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="86" height="30" uuid="08ebf9bc-a1e8-4835-ba14-1ec3bc0f7247">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7bda74d-1b20-4f57-aead-98d6e0daa669"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="0" width="92" height="30" uuid="fe4ddace-fbd9-4ac9-a038-3606080d1f53">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e27710d-33d7-43b1-a312-cd5da912781a"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Время]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="0" width="92" height="30" uuid="ce2d613b-d49f-43ae-b350-36c8b5390657">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19020f5f-a986-46b0-b8d1-0e2b613b5809"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Занятие]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="0" width="92" height="30" uuid="bd1d3b15-fda5-480d-a454-116439645972">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08d1261c-eee0-4974-a79f-d08aa9134ba7"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Группа]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="0" width="68" height="30" uuid="9d37ab40-eece-4ca3-b1a8-69723fb82173">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7f5b9db-81f3-458a-b3fe-915e97d38fab"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[Комната]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="150" height="30" uuid="ee608389-daac-4185-8918-0638f6d771db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b54dd4ac-7450-439e-82ae-bd3e0fa7fd9c"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[ФИО воспитателя]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="0" width="86" height="30" uuid="1afd09fe-7c6c-483d-99e6-5fd47b4073b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7bda74d-1b20-4f57-aead-98d6e0daa669"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+				<patternExpression><![CDATA["yyyy.MM.dd"]]></patternExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="92" height="30" uuid="594e6366-a4cb-49dd-8f99-8833f39eaec6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e27710d-33d7-43b1-a312-cd5da912781a"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="0" width="92" height="30" uuid="9ce21180-e557-458a-8623-fcdebab49b24">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19020f5f-a986-46b0-b8d1-0e2b613b5809"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Id_Lessons}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="92" height="30" uuid="03926f3f-0fde-4505-9b89-ccfb9ae90ab3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08d1261c-eee0-4974-a79f-d08aa9134ba7"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Id_Group}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="68" height="30" uuid="2a5f41f3-5898-43b4-96d2-39a8b8a9a285">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f7f5b9db-81f3-458a-b3fe-915e97d38fab"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Id_Classroom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="150" height="30" uuid="79ee68f4-7b59-4374-b768-e0a8523d748a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b54dd4ac-7450-439e-82ae-bd3e0fa7fd9c"/>
+				</reportElement>
+				<box padding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{Id_Teacher}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

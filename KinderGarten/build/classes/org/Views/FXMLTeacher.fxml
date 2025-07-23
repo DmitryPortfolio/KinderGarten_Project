@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="912.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.TeacherController">
+   <children>
+      <TableView fx:id="TvTeacher" layoutX="5.0" layoutY="29.0" prefHeight="479.0" prefWidth="598.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #4A686A;">
+        <columns>
+          <TableColumn fx:id="TcFIO" prefWidth="153.60000610351562" text="ФИО" />
+            <TableColumn fx:id="TcTelefon" prefWidth="123.99993896484375" text="Телефон" />
+            <TableColumn fx:id="TcAdres" prefWidth="156.0" text="Адрес" />
+            <TableColumn fx:id="TcSpecialization" prefWidth="162.39998779296877" text="Специализация" />
+        </columns>
+      </TableView>
+      <VBox layoutX="610.0" layoutY="29.0" prefHeight="253.0" prefWidth="294.0" spacing="10.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #4A686A;">
+         <children>
+            <Label style="-fx-text-fill: #4A686A;" text="Панель управления" underline="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="18.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Добавить">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#Edit" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Редактировать">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#Delete" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Удалить">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin></Button>
+            <Button fx:id="BtnPrint" mnemonicParsing="false" onAction="#Print" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0;" text="Печать">
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+      <AnchorPane layoutX="610.0" layoutY="293.0" prefHeight="213.0" prefWidth="294.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #8B5127;">
+         <children>
+            <ComboBox fx:id="CbFiltrSpecialization" layoutX="122.0" layoutY="79.0" onAction="#handleSpecializationFilter" prefWidth="150.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: #c99579;" />
+            <Label layoutX="13.0" layoutY="83.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #8B5127;" text="Специализация:" />
+            <Label layoutX="21.0" layoutY="29.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #8B5127;" text="Фильтры">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+              <CheckBox fx:id="CbFiltrOfon" layoutX="106.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleFilterToggleAction" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #8B5127;" text="Вкл/Выкл" />
+            <AnchorPane layoutX="11.0" layoutY="13.0" opacity="0.14" prefHeight="187.0" prefWidth="272.0" style="-fx-background-color: #c7613f; -fx-background-radius: 10;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

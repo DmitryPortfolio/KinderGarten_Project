@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="584.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.AttendanceAddController">
+   <children>
+      <AnchorPane layoutX="32.0" layoutY="37.0" opacity="0.14" prefHeight="90.0" prefWidth="520.0" style="-fx-background-color: #c7613f; -fx-background-radius: 10;" />
+      <GridPane layoutX="32.0" layoutY="164.0" prefHeight="227.0" prefWidth="520.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #4A686A;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.39996337890625" minWidth="10.0" prefWidth="113.5999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.80001220703124" minWidth="10.0" prefWidth="152.80002441406248" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <DatePicker fx:id="Date" prefHeight="26.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="CbStatus" prefHeight="26.0" prefWidth="213.0" style="-fx-background-color: #c99579; -fx-background-radius: 10; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="FIOChldren" prefHeight="26.0" prefWidth="197.0" style="-fx-background-color: #c99579; -fx-background-radius: 10; -fx-border-radius: 10;" GridPane.columnIndex="1" />
+            <Label style="-fx-text-fill: #4A686A;" text="Дата:" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="43.0" style="-fx-text-fill: #4A686A;" text="Статус:" GridPane.rowIndex="2" />
+            <Label style="-fx-text-fill: #4A686A;" text="ФИО ребенка:" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="30.0" left="110.0" top="30.0" />
+         </padding>
+      </GridPane>
+      <Button fx:id="BtnAdd" layoutX="138.0" layoutY="434.0" mnemonicParsing="false" onAction="#Add" prefHeight="42.0" prefWidth="142.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0; -fx-font-family: Arial; -fx-font-size: 14;" text="Сохранить" />
+      <Button fx:id="BtnExit" layoutX="301.0" layoutY="434.0" mnemonicParsing="false" onAction="#Exit" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0; -fx-font-family: Arial; -fx-font-size: 14;" text="Отмена" />
+      <Label layoutX="86.0" layoutY="45.0" text="Работа с записью">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.9621211398731578" endY="0.9166666648604653" startX="0.9621212270223733" startY="0.5000000288992218">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.29019609093666077" green="0.40784314274787903" blue="0.4156862795352936" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7803921699523926" green="0.3803921639919281" blue="0.24705882370471954" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Line endX="415.800048828125" layoutX="133.0" layoutY="135.0" startX="-100.0" stroke="#c77258" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="653.0" prefWidth="1009.0" style="-fx-background-color: #DFD8D0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Controllers.ChilrenEditController">
+   <children>
+      <Pane layoutX="14.0" layoutY="300.0" prefHeight="298.0" prefWidth="593.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="24.0" layoutY="6.0" style="-fx-text-fill: #4A686A;" text="Родители ребенка:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TvParents" layoutX="19.0" layoutY="39.0" prefHeight="244.0" prefWidth="556.0" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #4A686A;">
+              <columns>
+                <TableColumn fx:id="TcFIO" prefWidth="81.59998321533203" text="ФИО" />
+                  <TableColumn fx:id="TcTelefon" prefWidth="157.60003662109375" text="Контактные данные" />
+                  <TableColumn fx:id="TCAdres" prefWidth="89.5999755859375" text="Адрес" />
+                  <TableColumn fx:id="TcPassport" prefWidth="225.5999755859375" text="Паспортные данные" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="25.0" prefHeight="254.0" prefWidth="594.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="17.0" layoutY="5.0" style="-fx-text-fill: #4A686A;" text="О воспитаннике:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="41.0" style="-fx-text-fill: #4A686A;" text="ФИО воспитанника:" />
+            <Label layoutX="13.0" layoutY="109.0" style="-fx-text-fill: #4A686A;" text="Дата рождения:" />
+            <Label layoutX="12.0" layoutY="173.0" style="-fx-text-fill: #4A686A;" text="Дата поступления:" />
+            <Label layoutX="236.0" layoutY="108.0" style="-fx-text-fill: #4A686A;" text="Дата выбытия:   " />
+            <Label layoutX="238.0" layoutY="41.0" style="-fx-text-fill: #4A686A;" text="Группа:" />
+            <Label fx:id="lbDatePost" layoutX="11.0" layoutY="202.0" prefHeight="17.0" prefWidth="109.0" />
+            <Label fx:id="lbgroups" layoutX="238.0" layoutY="69.0" prefHeight="17.0" prefWidth="147.0" />
+            <Label fx:id="LbFIO" layoutX="12.0" layoutY="69.0" prefHeight="17.0" prefWidth="249.0" />
+            <Label fx:id="lbDateDeparture" layoutX="240.0" layoutY="140.0" prefHeight="17.0" prefWidth="136.0" />
+            <Label fx:id="lbDatebithday" layoutX="12.0" layoutY="139.0" prefHeight="17.0" prefWidth="147.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="630.0" layoutY="23.0" prefHeight="574.0" prefWidth="359.0" style="-fx-border-color: #4A686A; -fx-border-radius: 10;">
+         <children>
+            <TableView fx:id="TvAttendance" layoutX="23.0" layoutY="44.0" prefHeight="503.0" prefWidth="313.0" style="-fx-background-radius: 6; -fx-border-radius: 6; -fx-border-color: #4A686A;">
+              <columns>
+                <TableColumn fx:id="TcDate" prefWidth="144.0" text="Дата" />
+                <TableColumn fx:id="TcStatus" prefWidth="166.39996337890625" text="Наличие" />
+              </columns>
+            </TableView>
+            <Label layoutX="106.0" layoutY="8.0" style="-fx-text-fill: #4A686A;" text="Посещаемость:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="BtnExit" layoutX="658.0" layoutY="607.0" mnemonicParsing="false" onAction="#Exit" prefHeight="34.0" prefWidth="303.0" style="-fx-background-color: #4A686A; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #E6F0F0; -fx-font-family: Arial; -fx-font-size: 14;" text="Закрыть" />
+   </children>
+</AnchorPane>
